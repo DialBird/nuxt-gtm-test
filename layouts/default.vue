@@ -1,14 +1,19 @@
 <template>
-  <div class="container mx-auto mt-4">
-    <h1 class="text-xl font-bold">About</h1>
+  <div>
+    <Header />
+    <nuxt />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
+import Header from '@/components/Header.vue'
 
 export default defineComponent({
-  name: '',
+  name: 'Layout',
+  components: {
+    Header,
+  },
   setup() {},
 })
 </script>
