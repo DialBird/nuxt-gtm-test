@@ -11,6 +11,7 @@
         px-4
         rounded
       "
+      @click="onClick"
     >
       Click
     </button>
@@ -18,11 +19,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, useContext } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   name: '',
-  setup() {},
+  setup() {
+    const { $gtm } = useContext()
+    const onClick = () => {
+      $gtm.push({ event: 'click works!' })
+    }
+
+    return { onClick }
+  },
 })
 </script>
 
