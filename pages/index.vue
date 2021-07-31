@@ -25,7 +25,6 @@ export default Vue.extend({
   methods: {
     clickEvent() {
       console.log(this)
-      this.$gtm.push({ event: 'demo' })
     },
   },
 })
